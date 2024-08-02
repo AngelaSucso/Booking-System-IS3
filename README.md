@@ -78,7 +78,7 @@ Esta sección detalla cómo se proporcionan servicios de soporte para tareas aut
   </p>
 
 ## Pruebas de Software
-**Pruebas de APIs**
+**Pruebas de APIs**: 
 Casos de Prueba y Resultados
 - Documentación de Swagger:
 <p align="center">
@@ -153,7 +153,7 @@ class BookingTests(APITestCase):
 ```     
         
 ## Pruebas de Seguridad
-Casos de Prueba y Resultados:
+**Casos de Prueba y Resultados:**
    <p align="center">
     <img src="/Images/E1.jpg">
   </p>
