@@ -51,6 +51,13 @@ Casos de Prueba y Resultados
     <img src="/Images/RoutesSwagger.jpeg">
   </p>
 
+
+```php
+
+
+
+```
+
 - Documentación de Postman:
 <p align="center">
     <img src="/Images/postman.png">
