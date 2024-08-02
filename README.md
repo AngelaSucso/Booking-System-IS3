@@ -33,7 +33,7 @@ Esta sección detalla cómo se proporcionan servicios de soporte para tareas aut
 | GET         | api/client    | id, origin, destination, distance, duration     |
 | POST        | api/client    | origin, destination, distance, duration         |
 
-Modelos**
+**Modelos**
 <p align="center">
     <img src="/Images/Models.jpeg">
   </p>
