@@ -18,8 +18,16 @@ Se tiene como propósito definir las especificaciones (requisitos) funcionales y
 ## Objetivo Principal del Proyecto
 Gestión de Reservas y Ventas de Pasajes: Desarrollar un sistema que permita a los pasajeros reservar y comprar pasajes fácilmente a través de un portal web y una aplicación móvil.
 
+##Servicios de Soporte a Tareas Automáticas en Procesos de Negocio
+Esta sección detalla cómo se proporcionan servicios de soporte para tareas automatizadas en los procesos de negocio utilizando OpenAPI y la herramienta Swagger.
+
+**Modelos**
+<p align="center">
+    <img src="/Images/Models.jpeg">
+  </p>
+
 ## Pruebas de Software
-#Pruebas de APIs: Casos de Prueba
+Pruebas de APIs: Casos de Prueba
 - Documentación de Swagger:
 <p align="center">
     <img src="/Images/BookingsSwagger.jpeg">
