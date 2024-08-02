@@ -115,7 +115,7 @@ class BookingTests(APITestCase):
 ```     
         
 ## Pruebas de Seguridad
-
+Casos de Prueba y Resultados:
    <p align="center">
     <img src="/Images/E1.jpg">
   </p>
