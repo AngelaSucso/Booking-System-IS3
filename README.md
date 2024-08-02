@@ -22,7 +22,7 @@ Desarrollar un sistema que permita a los pasajeros reservar y comprar pasajes.
 ## Servicios de Soporte a Tareas Automáticas en Procesos de Negocio
 Esta sección detalla cómo se proporcionan servicios de soporte para tareas automatizadas en los procesos de negocio utilizando OpenAPI y la herramienta Swagger.
 
-**Modelos**
+**Operaciones Disponibles**
 
 | Métodos     |      URL      |                    Parámetros                   |
 |-------------|---------------|-------------------------------------------------|
@@ -33,7 +33,7 @@ Esta sección detalla cómo se proporcionan servicios de soporte para tareas aut
 | GET         | api/client    | id, origin, destination, distance, duration     |
 | POST        | api/client    | origin, destination, distance, duration         |
 
-- Swagger
+Modelos**
 <p align="center">
     <img src="/Images/Models.jpeg">
   </p>
