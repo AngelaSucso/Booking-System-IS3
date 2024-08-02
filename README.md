@@ -143,31 +143,31 @@ Casos de Prueba y Resultados:
 
 ## Principios SOLID
 - S - Single Responsibility Principle (SRP):
-Cada clase debe tener una única responsabilidad o motivo para cambiar. En otras palabras, una clase debe hacer una cosa y hacerla bien. Esto se puede observar en nuestro proyecto
+Cada clase debe tener una única responsabilidad o motivo para cambiar. Esto se puede observar en nuestro proyecto:
 <p align="center">
     <img src="/Images/SS2.jpeg">
   </p>
 
 - O - Open/Closed Principle (OCP):
-Las entidades de software deben estar abiertas para su extensión, pero cerradas para su modificación. Esto significa que debes poder añadir nuevas funcionalidades sin cambiar el código existente.  Esto se puede observar en nuestro proyecto
+Las entidades de software deben estar abiertas para su extensión, pero cerradas para su modificación. Esto se puede observar en nuestro proyecto:
 <p align="center">
     <img src="/Images/S3.jpeg">
   </p>
 
 - L - Liskov Substitution Principle (LSP):
-Los objetos de una clase derivada deben poder reemplazar a los objetos de la clase base sin alterar el comportamiento del programa. En otras palabras, las subclases deben ser substituibles por sus clases base sin introducir errores. Esto se puede observar en nuestro proyecto
+Los objetos de una clase derivada deben poder reemplazar a los objetos de la clase base sin alterar el comportamiento del programa. Esto se puede observar en nuestro proyecto:
 <p align="center">
     <img src="/Images/S4.jpeg">
   </p>
 
 - I - Interface Segregation Principle (ISP):
-Los clientes no deben verse obligados a depender de interfaces que no usan. Es mejor tener varias interfaces específicas y pequeñas en lugar de una interfaz grande y general. Esto se puede observar en nuestro proyecto
+Los clientes no deben verse obligados a depender de interfaces que no usan. Esto se puede observar en nuestro proyecto:
 <p align="center">
     <img src="/Images/S5.jpeg">
   </p>
 
 - D - Dependency Inversion Principle (DIP):
-Las dependencias deben ser abstraídas y no depender de implementaciones concretas. Los módulos de alto nivel no deben depender de módulos de bajo nivel, ambos deben depender de abstracciones (interfaces). Esto se puede observar en nuestro proyecto
+Las dependencias deben ser abstraídas y no depender de implementaciones concretas. Esto se puede observar en nuestro proyecto:
 <p align="center">
     <img src="/Images/SS1.jpeg">
   </p>
