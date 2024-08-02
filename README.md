@@ -24,7 +24,7 @@ Gestión de Reservas y Ventas de Pasajes: Desarrollar un sistema que permita a l
 ## Pruebas de Seguridad
 
    <p align="center">
-    <img src="/Images/E1.jpeg">
+    <img src="/Images/E1.jpg">
   </p>
 
    <p align="center">
