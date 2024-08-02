@@ -221,6 +221,41 @@ class ClientRepository:
 
 La capa de repositorio maneja el acceso a la base de datos. `ClientRepository` contiene métodos para recuperar datos de los clientes.
 
+
+## Principios SOLID
+- S - Single Responsibility Principle (SRP):
+Cada clase debe tener una única responsabilidad o motivo para cambiar. Esto se puede observar en nuestro proyecto:
+<p align="center">
+    <img src="/Images/SS2.jpeg">
+  </p>
+
+- O - Open/Closed Principle (OCP):
+Las entidades de software deben estar abiertas para su extensión, pero cerradas para su modificación. Esto se puede observar en nuestro proyecto:
+<p align="center">
+    <img src="/Images/S3.jpeg">
+  </p>
+
+- L - Liskov Substitution Principle (LSP):
+Los objetos de una clase derivada deben poder reemplazar a los objetos de la clase base sin alterar el comportamiento del programa. Esto se puede observar en nuestro proyecto:
+<p align="center">
+    <img src="/Images/S4.jpeg">
+  </p>
+
+- I - Interface Segregation Principle (ISP):
+Los clientes no deben verse obligados a depender de interfaces que no usan. Esto se puede observar en nuestro proyecto:
+<p align="center">
+    <img src="/Images/S5.jpeg">
+  </p>
+
+- D - Dependency Inversion Principle (DIP):
+Las dependencias deben ser abstraídas y no depender de implementaciones concretas. Esto se puede observar en nuestro proyecto:
+<p align="center">
+    <img src="/Images/SS1.jpeg">
+  </p>
+
+
+
+
 ## Servicios de Soporte a Tareas Automáticas en Procesos de Negocio
 Esta sección detalla cómo se proporcionan servicios de soporte para tareas automatizadas en los procesos de negocio utilizando OpenAPI y la herramienta Swagger.
 
@@ -378,38 +413,5 @@ class BookingTests(APITestCase):
 
 
   
-## Pruebas de Rendimiento
 
-
-
-## Principios SOLID
-- S - Single Responsibility Principle (SRP):
-Cada clase debe tener una única responsabilidad o motivo para cambiar. Esto se puede observar en nuestro proyecto:
-<p align="center">
-    <img src="/Images/SS2.jpeg">
-  </p>
-
-- O - Open/Closed Principle (OCP):
-Las entidades de software deben estar abiertas para su extensión, pero cerradas para su modificación. Esto se puede observar en nuestro proyecto:
-<p align="center">
-    <img src="/Images/S3.jpeg">
-  </p>
-
-- L - Liskov Substitution Principle (LSP):
-Los objetos de una clase derivada deben poder reemplazar a los objetos de la clase base sin alterar el comportamiento del programa. Esto se puede observar en nuestro proyecto:
-<p align="center">
-    <img src="/Images/S4.jpeg">
-  </p>
-
-- I - Interface Segregation Principle (ISP):
-Los clientes no deben verse obligados a depender de interfaces que no usan. Esto se puede observar en nuestro proyecto:
-<p align="center">
-    <img src="/Images/S5.jpeg">
-  </p>
-
-- D - Dependency Inversion Principle (DIP):
-Las dependencias deben ser abstraídas y no depender de implementaciones concretas. Esto se puede observar en nuestro proyecto:
-<p align="center">
-    <img src="/Images/SS1.jpeg">
-  </p>
 
