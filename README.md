@@ -69,12 +69,12 @@ Esta sección detalla cómo se proporcionan servicios de soporte para tareas aut
 
 - TokkenObtainPair
 <p align="center">
-    <img src="/Images/modeloTokken.png">
+    <img src="/Images/modeloToken.png">
   </p>
 
 - TokkenRefresh
 <p align="center">
-    <img src="/Images/modeloTokkenRefresh.png">
+    <img src="/Images/modeloTokenRefresh.png">
   </p>
 
 ## Pruebas de Software
