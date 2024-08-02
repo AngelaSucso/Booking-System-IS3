@@ -103,7 +103,8 @@ class BookingTests(APITestCase):
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
         self.assertEqual(Payment.objects.count(), 1)
         self.assertEqual(Payment.objects.get().payment_method, 'credit_card')
-
+        ```
+        
 ## Pruebas de Seguridad
 
    <p align="center">
