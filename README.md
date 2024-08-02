@@ -53,7 +53,7 @@ Pruebas de APIs: Casos de Prueba
 
 - Documentación de Postman:
 <p align="center">
-    <img src="/Images/Postman.png">
+    <img src="/Images/postman.png">
   </p>
 
 ## Pruebas de Seguridad
