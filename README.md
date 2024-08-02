@@ -17,3 +17,36 @@ Se tiene como propósito definir las especificaciones (requisitos) funcionales y
 
 ## Objetivo Principal del Proyecto
 Gestión de Reservas y Ventas de Pasajes: Desarrollar un sistema que permita a los pasajeros reservar y comprar pasajes fácilmente a través de un portal web y una aplicación móvil.
+
+## Pruebas de Software
+
+
+## Pruebas de Seguridad
+
+
+## Pruebas de Rendimiento
+
+
+
+## Principios SOLID
+- S - Single Responsibility Principle (SRP):
+Cada clase debe tener una única responsabilidad o motivo para cambiar. En otras palabras, una clase debe hacer una cosa y hacerla bien. Esto se puede observar en nuestro proyecto
+
+
+- O - Open/Closed Principle (OCP):
+Las entidades de software deben estar abiertas para su extensión, pero cerradas para su modificación. Esto significa que debes poder añadir nuevas funcionalidades sin cambiar el código existente.  Esto se puede observar en nuestro proyecto
+
+
+- L - Liskov Substitution Principle (LSP):
+Los objetos de una clase derivada deben poder reemplazar a los objetos de la clase base sin alterar el comportamiento del programa. En otras palabras, las subclases deben ser substituibles por sus clases base sin introducir errores. Esto se puede observar en nuestro proyecto
+
+
+
+- I - Interface Segregation Principle (ISP):
+Los clientes no deben verse obligados a depender de interfaces que no usan. Es mejor tener varias interfaces específicas y pequeñas en lugar de una interfaz grande y general. Esto se puede observar en nuestro proyecto
+
+
+- D - Dependency Inversion Principle (DIP):
+Las dependencias deben ser abstraídas y no depender de implementaciones concretas. Los módulos de alto nivel no deben depender de módulos de bajo nivel, ambos deben depender de abstracciones (interfaces). Esto se puede observar en nuestro proyecto
+
+
