@@ -56,7 +56,7 @@ Casos de Prueba y Resultados
     <img src="/Images/postman.png">
   </p>
 - Test de Api:
-```python
+´´´python
 class BookingTests(APITestCase):
     def setUp(self):
         self.user = User.objects.create_user(username='testuser', password='testpass')
@@ -103,7 +103,7 @@ class BookingTests(APITestCase):
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
         self.assertEqual(Payment.objects.count(), 1)
         self.assertEqual(Payment.objects.get().payment_method, 'credit_card')
-        ```
+        ´´´
         
 ## Pruebas de Seguridad
 
