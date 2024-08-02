@@ -54,7 +54,7 @@ Casos de Prueba y Resultados
 
 - Documentación de Postman:
 <p align="center">
-    <img src="/Images/postman.png">
+    <img src="/Images/postman.PNG">
   </p>
 
 Test de Api:
