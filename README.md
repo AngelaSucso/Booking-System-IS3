@@ -145,7 +145,7 @@ Casos de Prueba y Resultados:
 - S - Single Responsibility Principle (SRP):
 Cada clase debe tener una única responsabilidad o motivo para cambiar. En otras palabras, una clase debe hacer una cosa y hacerla bien. Esto se puede observar en nuestro proyecto
 <p align="center">
-    <img src="/Images/S2.jpeg">
+    <img src="/Images/SS2.jpeg">
   </p>
 
 - O - Open/Closed Principle (OCP):
@@ -169,6 +169,6 @@ Los clientes no deben verse obligados a depender de interfaces que no usan. Es m
 - D - Dependency Inversion Principle (DIP):
 Las dependencias deben ser abstraídas y no depender de implementaciones concretas. Los módulos de alto nivel no deben depender de módulos de bajo nivel, ambos deben depender de abstracciones (interfaces). Esto se puede observar en nuestro proyecto
 <p align="center">
-    <img src="/Images/S1.jpeg">
+    <img src="/Images/SS1.jpeg">
   </p>
 
