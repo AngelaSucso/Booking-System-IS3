@@ -52,7 +52,9 @@ La capa de infraestructura proporciona implementaciones técnicas para interactu
 
 ## Estructura de Carpetas
 
-iamgen
+<p align="center">
+    <img src="/Images/Estructura.jpeg">
+  </p>
 
 
 # Patrones de Arquitectura
