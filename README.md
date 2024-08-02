@@ -98,7 +98,7 @@ Casos de Prueba y Resultados
   </p>
 
 <p align="center">
-    <img src="/Images/postmanPOS.JPG">
+    <img src="/Images/POSpostman.JPG">
   </p>
 
 Test de Api:
