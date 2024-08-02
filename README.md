@@ -19,7 +19,10 @@ Se tiene como propósito definir las especificaciones (requisitos) funcionales y
 Gestión de Reservas y Ventas de Pasajes: Desarrollar un sistema que permita a los pasajeros reservar y comprar pasajes fácilmente a través de un portal web y una aplicación móvil.
 
 ## Pruebas de Software
-
+Pruebas de APIs: Casos de Prueba
+<p align="center">
+    <img src="/Images/BookingsSwagger.jpeg">
+  </p>
 
 ## Pruebas de Seguridad
 
