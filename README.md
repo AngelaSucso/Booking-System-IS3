@@ -27,8 +27,8 @@ La capa de dominio define los conceptos y reglas del negocio. Esta capa no debe 
 
 ### Componentes
 
-- **Models**: Representan los objetos de negocio y sus relaciones. En tu caso, `Client` es un modelo de dominio.
-- **Services**: Contienen la lógica de negocio que no encaja naturalmente dentro de los modelos. Por ejemplo, `client_service.py` podría contener lógica para crear, actualizar o validar clientes.
+- **Models**: Representan los objetos de negocio y sus relaciones. En nuestro proyecto, `Client` es un modelo de dominio.
+- **Services**: Contienen la lógica de negocio que no encaja naturalmente dentro de los modelos. Por ejemplo, `client_service.py` contiene lógica para crear, actualizar o validar clientes.
 
 ## Application Layer (Capa de Aplicación)
 
@@ -37,7 +37,7 @@ La capa de aplicación define cómo se utiliza el dominio. Orquesta las tareas y
 
 ### Componentes
 
-- **Views**: Manejan las solicitudes HTTP y llaman a los servicios de aplicación o de dominio para realizar operaciones. En tu estructura, `views.py` contiene las vistas relacionadas con los clientes.
+- **Views**: Manejan las solicitudes HTTP y llaman a los servicios de aplicación o de dominio para realizar operaciones. En nuestra estructura, `views.py` contiene las vistas relacionadas con los clientes.
 
 ## Infrastructure Layer (Capa de Infraestructura)
 
@@ -60,7 +60,7 @@ La capa de infraestructura proporciona implementaciones técnicas para interactu
 # Patrones de Arquitectura
 
 
-El proyecto utiliza principalmente una **arquitectura monolítica** y sigue el patrón **MVC (Model-View-Controller)**, que es típico en aplicaciones Django. Sin embargo, la aplicación `users` está estructurada siguiendo los principios de **arquitectura por capas (Presentación, Aplicación, Dominio, Repositorio)** de DDD.
+El proyecto sigue el patrón **MVC (Model-View-Controller)**, que es típico en aplicaciones Django. Sin embargo, la aplicación `users` está estructurada siguiendo los principios de **arquitectura por capas (Presentación, Aplicación, Dominio, Repositorio)** de DDD.
 
 ### Capas de la Arquitectura
 
