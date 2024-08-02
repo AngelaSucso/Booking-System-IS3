@@ -23,14 +23,14 @@ Gestión de Reservas y Ventas de Pasajes: Desarrollar un sistema que permita a l
 
 ## Pruebas de Seguridad
 
-   <p align="center">
-    <img src="/Images/E1.jpeg">
-  </p>
 
    <p align="center">
     <img src="/Images/E2.jpeg">
   </p>
 
+   <p align="center">
+    <img src="/Images/E1.jpeg">
+  </p>
 
    <p align="center">
     <img src="/Images/E3.jpeg">
