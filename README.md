@@ -32,9 +32,49 @@ Esta sección detalla cómo se proporcionan servicios de soporte para tareas aut
 | GET         | api/client    | id, origin, destination, distance, duration     |
 | POST        | api/client    | origin, destination, distance, duration         |
 
-**Modelos**
+**Modelos Vista Sawagger**
 <p align="center">
     <img src="/Images/Models.jpeg">
+  </p>
+
+- Booking
+<p align="center">
+    <img src="/Images/modeloBooking.png">
+  </p>
+
+- BusCompany
+<p align="center">
+    <img src="/Images/modeloBusCompany.png">
+  </p>
+
+- Bus
+<p align="center">
+    <img src="/Images/modeloBus.png">
+  </p>
+
+- Payment
+<p align="center">
+    <img src="/Images/modeloPayment.png">
+  </p>
+
+- Route
+<p align="center">
+    <img src="/Images/modeloRoute.png">
+  </p>
+
+- Schedule
+<p align="center">
+    <img src="/Images/modeloSchedule.png">
+  </p>
+
+- TokkenObtainPair
+<p align="center">
+    <img src="/Images/modeloTokken.png">
+  </p>
+
+- TokkenRefresh
+<p align="center">
+    <img src="/Images/modeloTokkenRefresh.png">
   </p>
 
 ## Pruebas de Software
