@@ -18,6 +18,207 @@ Se tiene como propósito definir las especificaciones (requisitos) funcionales y
 **Objetivo Principal del Proyecto**
 - Gestión de Reservas y Ventas de Pasajes: Desarrollar un sistema que permita a los pasajeros reservar y comprar pasajes.
 
+# Domain-Driven Design (DDD) Explanation
+
+## Domain Layer (Capa de Dominio)
+
+### Responsabilidad
+La capa de dominio define los conceptos y reglas del negocio. Esta capa no debe depender de las capas de infraestructura o aplicación.
+
+### Componentes
+
+- **Models**: Representan los objetos de negocio y sus relaciones. En tu caso, `Client` es un modelo de dominio.
+- **Services**: Contienen la lógica de negocio que no encaja naturalmente dentro de los modelos. Por ejemplo, `client_service.py` podría contener lógica para crear, actualizar o validar clientes.
+
+## Application Layer (Capa de Aplicación)
+
+### Responsabilidad
+La capa de aplicación define cómo se utiliza el dominio. Orquesta las tareas y maneja los casos de uso del sistema. Interactúa con la capa de infraestructura para obtener datos necesarios.
+
+### Componentes
+
+- **Views**: Manejan las solicitudes HTTP y llaman a los servicios de aplicación o de dominio para realizar operaciones. En tu estructura, `views.py` contiene las vistas relacionadas con los clientes.
+
+## Infrastructure Layer (Capa de Infraestructura)
+
+### Responsabilidad
+La capa de infraestructura proporciona implementaciones técnicas para interactuar con sistemas externos. Implementa repositorios, serializers y otros adaptadores.
+
+### Componentes
+
+- **Repositories**: Implementan la persistencia de los modelos de dominio. `client_repository.py` maneja las operaciones CRUD para el modelo `Client`.
+- **Serializers**: Transforman los modelos de dominio en formatos compatibles con JSON y viceversa. `serializers.py` contiene los serializers para los modelos de dominio.
+
+
+## Estructura de Carpetas
+
+iamgen
+
+
+# Patrones de Arquitectura
+
+
+El proyecto utiliza principalmente una **arquitectura monolítica** y sigue el patrón **MVC (Model-View-Controller)**, que es típico en aplicaciones Django. Sin embargo, la aplicación `users` está estructurada siguiendo los principios de **arquitectura por capas (Presentación, Aplicación, Dominio, Repositorio)** de DDD.
+
+### Capas de la Arquitectura
+
+1. **Presentación**:
+   - Responsable de manejar las interacciones con el usuario.
+   - En nuestro caso, esto está implementado en `views.py` de la aplicación `users`.
+
+2. **Aplicación**:
+   - Contiene la lógica de negocio y las reglas de la aplicación.
+   - En nuestro proyecto, esta lógica está implementada en `client_service.py` dentro de `domain/services/`.
+
+3. **Dominio**:
+   - Representa los conceptos centrales y las reglas de negocio del dominio.
+   - En este proyecto, los modelos de datos y la lógica de negocio asociada están en `models/client.py`.
+
+4. **Repositorio**:
+   - Maneja el acceso a la base de datos.
+   - En este proyecto, los repositorios están implementados en `repositories/client_repository.py`.
+
+
+### Explicación de Cada Parte en DDD
+
+
+`users/application/views.py`:
+
+```python
+from rest_framework import viewsets
+from rest_framework.response import Response
+from rest_framework import status
+from apps.users.domain.services.client_service import ClientService
+from apps.users.infrastructure.serializers import ClientSerializer
+
+
+class ClientViewSet(viewsets.ViewSet):
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+        self.client_service = ClientService()
+
+    def list(self, request):
+        clients = self.client_service.get_all_clients()
+        serializer = ClientSerializer(clients, many=True)
+        return Response(serializer.data)
+
+    def retrieve(self, request, pk=None):
+        client = self.client_service.get_client_by_id(pk)
+        if client is None:
+            return Response(status=status.HTTP_404_NOT_FOUND)
+        serializer = ClientSerializer(client)
+        return Response(serializer.data)
+
+    def create(self, request):
+        serializer = ClientSerializer(data=request.data)
+        if serializer.is_valid():
+            client = self.client_service.create_client(serializer.validated_data)
+            return Response(ClientSerializer(client).data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+    def update(self, request, pk=None):
+        serializer = ClientSerializer(data=request.data)
+        if serializer.is_valid():
+            client = self.client_service.update_client(pk, serializer.validated_data)
+            return Response(ClientSerializer(client).data)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+    def destroy(self, request, pk=None):
+        self.client_service.delete_client(pk)
+        return Response(status=status.HTTP_204_NO_CONTENT)
+```
+
+`users/domain/services/client_service.py`:
+
+```python
+from apps.users.infrastructure.repositories.client_repository import ClientRepository
+
+
+class ClientService:
+    def __init__(self):
+        self.client_repository = ClientRepository()
+
+    def get_all_clients(self):
+        return self.client_repository.get_all()
+
+    def get_client_by_id(self, client_id):
+        return self.client_repository.get_by_id(client_id)
+
+    def create_client(self, client_data):
+        return self.client_repository.create(client_data)
+
+    def update_client(self, client_id, client_data):
+        client = self.client_repository.get_by_id(client_id)
+        return self.client_repository.update(client, client_data)
+
+    def delete_client(self, client_id):
+        client = self.client_repository.get_by_id(client_id)
+        self.client_repository.delete(client)
+```
+
+`users/domain/models/client.py`:
+```python
+from django.db import models
+
+
+class Client(models.Model):
+    first_name = models.CharField(max_length=50)
+    last_name = models.CharField(max_length=50)
+    age = models.PositiveIntegerField()
+
+    def __str__(self):
+        return f"{self.first_name} {self.last_name}"
+
+```
+
+
+`users/domain/models/client.py`:
+```python
+from django.db import models
+
+
+class Client(models.Model):
+    first_name = models.CharField(max_length=50)
+    last_name = models.CharField(max_length=50)
+    age = models.PositiveIntegerField()
+
+    def __str__(self):
+        return f"{self.first_name} {self.last_name}"
+```
+La capa de dominio contiene los modelos de datos y la lógica de negocio central. El modelo `Client` representa un cliente en el sistema.
+
+`users/infrastructure/repositories/client_repository.py`:
+```python
+from apps.users.domain.models.client import Client
+
+
+class ClientRepository:
+    @staticmethod
+    def get_all():
+        return Client.objects.all()
+
+    @staticmethod
+    def get_by_id(client_id):
+        return Client.objects.get(id=client_id)
+
+    @staticmethod
+    def create(client_data):
+        return Client.objects.create(**client_data)
+
+    @staticmethod
+    def update(client, client_data):
+        for key, value in client_data.items():
+            setattr(client, key, value)
+        client.save()
+        return client
+
+    @staticmethod
+    def delete(client):
+        client.delete()
+```
+
+La capa de repositorio maneja el acceso a la base de datos. `ClientRepository` contiene métodos para recuperar datos de los clientes.
+
 ## Servicios de Soporte a Tareas Automáticas en Procesos de Negocio
 Esta sección detalla cómo se proporcionan servicios de soporte para tareas automatizadas en los procesos de negocio utilizando OpenAPI y la herramienta Swagger.
 
