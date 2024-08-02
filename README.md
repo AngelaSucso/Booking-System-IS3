@@ -51,6 +51,11 @@ Pruebas de APIs: Casos de Prueba
     <img src="/Images/RoutesSwagger.jpeg">
   </p>
 
+- Documentación de Postman:
+<p align="center">
+    <img src="/Images/Postman.png">
+  </p>
+
 ## Pruebas de Seguridad
 
    <p align="center">
